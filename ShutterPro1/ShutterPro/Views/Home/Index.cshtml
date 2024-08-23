@@ -1,0 +1,78 @@
+﻿@using ShutterPro.Models;
+@model List<TblProductionScheduleList>
+@{
+    ViewData["Title"] = "ShutterPro Project";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Customer/Order Selection</title>
+    <link rel="stylesheet" href="~/css/index.css?v=1.2">
+</head>
+<body>
+    <h3>Customer/ Order Selection - Current Orders</h3>
+    <h3>Select the Order to be Viewed or Modified</h3>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Dealer</th>
+                <th>Company Name</th>
+                <th>Order No.</th>
+                <th>Address</th>
+                <th>Order Dt</th>
+                <th>Due Dt</th>
+                <th>Total Sq. Mt.</th>
+                <th>Order-Amt</th>
+                <th>PO</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    @* <div>
+        <table style="width: 25%;">
+            <tr style="width: 100%;">
+                <td><input type="radio" name="sort" id="name"><label for="name">Sort By Name</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="sort" id="dealer"><label for="dealer">Sort By Dealer</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="sort" id="order"><label for="order">Sort By Order</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="sort" id="address"><label for="address">Sort By Address</label></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="sort" id="po"><label for="po">Sort by PO</label></td>
+            </tr>
+        </table>
+    </div> *@
+    <div class="input-container">
+        <input type="radio" name="sort" value="name">
+        <label for="name">Sort By Name</label>
+        <input type="radio" name="sort" value="dealer">
+        <label for="dealer">Sort By Dealer</label>
+        <input type="radio" name="sort" value="order">
+        <label for="order">Sort By Order</label>
+        <input type="radio" name="sort" value="address">
+        <label for="address">Sort By Address</label>
+        <input type="radio" name="sort" value="po">
+        <label for="po">Sort By PO</label>
+    </div>
+    <div class="button-container">
+        <button onclick="duplicateOrder()">Duplicate Order</button>
+        <button onclick="newOrder()">New Order</button>
+        <button onclick="ok()">View Detail</button>
+        <button onclick="exit()">Exit</button>
+    </div>
+    <script>
+        var layoutFrame = @Html.Raw(Json.Serialize(Model));
+    </script>
+</body>
+<script src="~/js/index.js?v=1.4"></script>
+</html>
+

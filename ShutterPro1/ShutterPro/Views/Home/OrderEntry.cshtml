@@ -1,0 +1,110 @@
+@using ShutterPro.Models;
+@model List<TblPlantationJobDetail>
+@{
+    ViewData["Title"] = "ShutterPro Project";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Order Details</title>
+    <link rel="stylesheet" href="~/css/index.css?v=1.2">
+</head>
+<body>
+    <h3>Order Entry Details screen</h3>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopupBtn" class="close">&times;</span>
+            <iframe id="popupIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    <button onclick="back()">Back</button>
+    <div>
+        <div style="padding-bottom:20px">
+           <table style="width:50%;padding:10px" border="0">
+               <tr>
+                    <td style="width:25%">Order No:</td>
+                    <td style="width:75%"><input type="text" disabled id="orderId"></td>
+               </tr>
+                <tr>
+                    <td style="width:25%">Dealer ID:</td>
+                    <td style="width:75%"><input type="text" disabled id="dealerId"></td>
+                </tr>
+                <tr>
+                    <td style="width:25%">Lastname:</td>
+                    <td style="width:75%"><input type="text" id="lastName" disabled></td>
+                </tr>
+                <tr>
+                    <td style="width:25%">Date:</td>
+                    <td style="width:75%"> <input type="text" id="date" disabled></td>
+                </tr>
+           </table>
+        </div>
+        <div>
+        </div>
+    </div>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>NO.</th>
+                <th>Product</th>
+                <th>Qty</th>
+                <th>Location</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Louvers</th>
+                <th>Pnl</th>
+                <th>Fold</th>
+                <th>DR</th>
+                <th>OC</th>
+                <th>Mount</th>
+                <th>Frame Type</th>
+                <th>Post</th>
+                <th>Byps</th>
+                <th>Sub</th>
+                <th>Sq. Mt</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Notes</th>
+                <th>Spec</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div style="padding:10px">
+         <table style="width:100%;padding:10px" border="0">
+               <tr>
+                <td style="width:10%"><button>Measure Form</button></td>
+                <td style="width:10%"> <button>Enter Room</button></td>
+                <td style="width:15%">Panel: <input type="number" disabled id="panel"></td>
+                <td style="width:15%">Total Sqmt:  <input type="number" disabled id="totalSqm"></td>
+                <td style="width:15%">Price/Sqm: <input type="number" disabled id="pricePerSqm"></td>
+                <td style="width:35%">Total Price: <input type="number" disabled id="totalPrice"></td>
+                    
+               </tr>
+        </table>
+        
+       
+    </div>
+    <div class="button-container">
+        <button onclick="addRow()">Add</button>
+        <button onclick="deleteRow()">Delete</button>
+        <button onclick="editRow()">Edit</button>
+        <button onclick="undoEdit()">Undo</button>
+        <button onclick="moveLineUp()">Move Line Up</button>
+        <button onclick="moveLineDown()">Move Line Down</button>
+        <button onclick="preview()">Preview</button>
+        <button onclick="customer()">Customer</button>
+        <button onclick="defaultGrid()">Default Grid</button>
+        <button onclick="layout()">Layout</button>
+        <button onclick="moneyButton()">$$$btn</button>
+        <button onclick="exit()">Exit</button>
+    </div>
+    <script>
+        var layoutFrame = @Html.Raw(Json.Serialize(Model));
+    </script>
+</body>
+    <script src="~/js/OrderEntry.js?v=1.11"></script>
+</html>
