@@ -1,0 +1,82 @@
+@using ShutterPro.Models;
+@model List<TblLayoutFrame>
+@{
+    ViewData["Title"] = "ShutterPro Project";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Layout Frame</title>
+    <link rel="stylesheet" href="~/css/index.css?v=1.2">
+</head>
+<body>
+    <h3>Layout Frame Screen</h3>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopupBtn" class="close">&times;</span>
+            <iframe id="popupIframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    <button onclick="back()">Back</button>
+    <div>
+        <div style="padding:5px">
+         <label for="orderId">Order No:</label>
+         <input type="text" disabled id="orderId">
+         <label for="dealerId">Dealer ID:</label>
+         <input type="text" disabled id="dealerId">
+         <label for="lastName">Lastname:</label>
+         <input type="text" id="lastName" disabled>
+        </div>
+        <div class="btn-container-above" style="padding:10px">
+          <button>Pick Frames & stops</button>
+          <button>Fill Next</button>
+          <button>Fill All</button>
+          <button>Copy to All</button>
+        </div>
+    </div>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>NO.</th>
+                <th>Product</th>
+                <th>Location</th>
+                <th>Width</th>
+                <th>Height</th>
+                <th>Louvers</th>
+                <th>Fold</th>
+                <th>Left</th>
+                <th>Top</th>
+                <th>Right</th>
+                <th>Bottom</th>
+                <th>Left</th>
+                <th>Top</th>
+                <th>Right</th>
+                <th>Bottom</th>
+                <th>Notes</th>
+                <th>Spec</th>
+                <th>View Panel</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button onclick="eliminate()">Eliminate</button>
+        <button onclick="undo()">Undo</button>
+        <button onclick="reCalc()">ReCalc</button>
+        <button onclick="directEntry()">Direct Entry</button>
+        <button onclick="moneyButton()">$$$</button>
+        <button onclick="panelDesign()">Panel Design</button>
+        <button onclick="finishing()">Finishing</button>
+        <button onclick="reports()">Reports</button>
+        <button onclick="exitOrder()">Exit Order</button>
+    </div>
+    <script>
+        var layoutFrame = @Html.Raw(Json.Serialize(Model));
+    </script>
+</body>
+<script src="~/js/LayoutFrame.js?v=1.5"></script>
+</html>

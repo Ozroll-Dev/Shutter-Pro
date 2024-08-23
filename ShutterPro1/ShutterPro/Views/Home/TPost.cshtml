@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "ShutterPro Project";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - TPost</title>
+    <link rel="stylesheet" href="~/css/tPost.css">
+</head>
+<body>
+
+    <div class="mainDiv">
+        <div id="allBtn">
+            <h3>TPost Design Screen</h3>
+            <button>selectPost</button>
+            <button>Equalize</button>
+            <button>Soide Frame</button>
+            <button id="Submit">Accept</button>
+            <button>Cancel</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="canvas">
+            <canvas>
+            </canvas>
+        </div>
+    </div>
+</body>
+<script src="~/js/TPost.js?v=1.16"></script>
+</html>

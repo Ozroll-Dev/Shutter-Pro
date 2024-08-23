@@ -1,0 +1,103 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td[contenteditable="true"] {
+    background-color: #f9f9f9;
+}
+
+tr.selected {
+    background-color: #e0e0e0;
+}
+input{
+    width: 100px;
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+    .post-checkbox{
+        width:30px;
+        margin-left:0px;
+    }
+    .check-btn{
+        background:none;
+        padding:0px;
+        color:blue;
+    }
+    .check-btn:hover{
+        background:none;
+    }
+.button-container {
+    text-align: center;
+}
+/* popup content */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+.popup-content iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "ShutterPro Demo";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Panel Design</title>
+    <link rel="stylesheet" href="~/css/Panel.css?v=1.0">
+</head>
+
+<body>
+    <div class="navbar">
+        <h3>Panel Design Screen</h3>
+    </div>
+    <div class="lower-navbar">
+        <h2>Panel Design</h2>
+        <div class="inner-lower-navbar">
+            <div>
+                <h4>Job No.: 278</h4>
+                <h4>Dealer: Sumit</h4>
+            </div>
+            <div>
+                <h4>Cust ID: 243</h4>
+                <h4>Lastname: Kumar</h4>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="canvas-content">
+            <div id="canvas">
+                <canvas>
+                </canvas>
+            </div>
+            <br>
+            <button class="button button-left">D-Rail to Top</button>
+            <button class="button button-left">Rear Tilt</button>
+            <br>
+            <button class="button button-left">Rear Tilt All</button>
+            <button class="button button-left">Tilt Over DR (T)</button>
+            <br>
+            <button class="button button-left">Open Tilt</button>
+            <button class="button button-left">Open Tilt All</button>
+        </div>
+        <div class="option-content">
+            <div class="right-top-btn">
+                <button class="button">Set Standard Top Rail</button>
+                <button class="button" id="dividerBtn">Divider Rail Add/Delete</button>
+                <button class="button">Raised Panels Add/Delete</button>
+                <button class="button">Split Tilt Rod Add/Del</button>
+            </div>
+            <div class="right-mid-btn">
+                <button class="button">Sort by Height</button>
+                <button class="button">Confirm All Same Height</button>
+            </div>
+            <div class="data-table">
+              <div class="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Location</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>Size</th>
+                    <th>Fold</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+            </div>
+            <div class="right-mid-btn2">
+                <button class="button">Uneven Panels</button>
+                <button class="button">Rail Summary</button>
+                <button class="button">Exit</button>
+                <button class=" button" id="Submit">Submit</button>
+            </div>
+            <div class="right-bottom-btn">
+                <button class="button">Special Shapes</button>
+                <button class="button">Undo Last Edit</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="~/js/panelDesign.js?v=2.5"></script>
+
+</html>

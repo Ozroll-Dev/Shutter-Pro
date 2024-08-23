@@ -1,0 +1,55 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+.mainDiv {
+    width: 1260px;
+    height: 600px;
+    background-color: antiquewhite;
+}
+
+canvas {
+    border: 1px solid black;
+    background-color: white;
+}
+
+#canvas {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.custom-input {
+    position: absolute;
+    font-size: 12px;
+    height: 25px;
+    width: 60px;
+    outline: none;
+    padding-left: 4px;
+}
+
+.custom-leftBtn {
+    position: absolute;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 25px;
+    height: 15px;
+    padding-left: 2px;
+}
+
+.custom-rightBtn {
+    position: absolute;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 25px;
+    height: 15px;
+    padding-left: 2px;
+}
+
+#allBtn {
+    padding-top: 30px;
+    padding-left: 30px;
+}
